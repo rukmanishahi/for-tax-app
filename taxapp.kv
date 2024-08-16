@@ -1,0 +1,46 @@
+#:kivy 2.0.0
+
+<TaxLayout>:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+    canvas.before:
+        Color:
+            rgba: (0.1, 0.4, 0.1, 1)  # Forest green
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    TextInput:
+        id: income_input
+        hint_text: 'Enter income in rupees'
+        input_filter: 'float'
+        size_hint_y: None
+        height: 40
+        padding: [10, 5]
+        font_name: 'NewTimesRoman'
+
+    TextInput:
+        id: deductions_input
+        hint_text: 'Enter deductions in rupees'
+        input_filter: 'float'
+        size_hint_y: None
+        height: 40
+        padding: [10, 5]
+        font_name: 'NewTimesRoman'
+
+    Button:
+        text: 'Calculate Tax'
+        size_hint_y: None
+        height: 50
+        background_color: (1, 0, 0, 1)  # Red color
+        on_press: root.parent.calculate_tax()
+        font_name: 'NewTimesRoman'
+
+    Label:
+        id: result_label
+        text: 'Tax will be displayed here'
+        size_hint_y: None
+        height: 50
+        color: (1, 1, 1, 1)  # White color
+        font_name: 'NewTimesRoman'
