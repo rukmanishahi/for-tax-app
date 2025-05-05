@@ -1,0 +1,1 @@
+i made this to turn my .py file into .apk because i had made an app with py (obv) but it wasnt gping to smoothy with the conversion process so i watched a few vids on yt and here we are trying to convert the file using github lol
